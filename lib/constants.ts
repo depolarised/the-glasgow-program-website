@@ -217,7 +217,7 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/peter-macfarlane.jpg",
     email: "peter.macfarlane@glasgow.ac.uk",
     phone: "0141 201 5410",
-    bio: "Professor Macfarlane pioneered computerised ECG interpretation, developing the Glasgow Program over more than 50 years. He was Professor of Electrocardiology at the University of Glasgow, and his work has influenced ESC, ACC, and AHA guidelines for acute myocardial infarction diagnosis.",
+    bio: "Professor Macfarlane is Emeritus Professor and Honorary Senior Research Fellow at the University of Glasgow. He served as Professor in Medical Cardiology (1991–1995) and Professor of Electrocardiology (1995–2010). His career has focused on applying computer techniques to ECG interpretation, and the Glasgow Program developed in his laboratory is now used worldwide. His research into ECG variations by age, gender, and ethnicity has influenced international guidelines for the ECG definition of acute myocardial infarction. He established the ECG Core Laboratory supporting national and international clinical trials and epidemiological studies. A Fellow of the Royal Society of Edinburgh and other learned societies, he has served as Treasurer of the International Society of Electrocardiology since its founding in 1983 and was President from 2007–2009.",
     achievements: [
       "Commander of the Order of the British Empire (CBE, 2014) for Services to Healthcare",
       "Fellow of the Royal Society of Edinburgh (FRSE)",
