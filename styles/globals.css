@@ -32,10 +32,10 @@
     --color-border: #D1D9E6;
     --color-border-hover: #011451;
 
-    /* Status colors from UofG secondary light palette */
-    --color-success: #81C071;
-    --color-warning: #F2D25C;
-    --color-critical: #E98BAF;
+    /* Status colors - darkened for WCAG contrast on light backgrounds */
+    --color-success: #3A7A36;
+    --color-warning: #A07A17;
+    --color-critical: #B23B68;
 
     /* ECG visualization */
     --color-ecg-line: #011451;

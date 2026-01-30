@@ -1,7 +1,7 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
-import { glasgowTheme, getThemeCSSVariables } from "@/lib/themes";
+import { createContext, useContext } from "react";
+import { glasgowTheme } from "@/lib/themes";
 import type { Theme } from "@/lib/themes";
 
 interface ThemeContextType {
@@ -11,23 +11,8 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-
-  // Apply theme CSS variables on mount
-  useEffect(() => {
-    setMounted(true);
-    const variables = getThemeCSSVariables(glasgowTheme);
-
-    Object.entries(variables).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(key, value);
-    });
-  }, []);
-
-  // Prevent flash of unstyled content
-  if (!mounted) {
-    return null;
-  }
-
+  // CSS variables are statically defined in styles/globals.css
+  // No need for dynamic application since we have a single theme
   return (
     <ThemeContext.Provider value={{ theme: glasgowTheme }}>
       {children}

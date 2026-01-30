@@ -89,10 +89,10 @@ export const glasgowTheme: Theme = {
     border: "#D1D9E6",
     borderHover: "#011451",
 
-    // Status colors from secondary light palette
-    success: "#81C071", // Light green
-    warning: "#F2D25C", // Light yellow
-    critical: "#E98BAF", // Light pink
+    // Status colors - darkened for WCAG contrast on light backgrounds
+    success: "#3A7A36", // Dark green
+    warning: "#A07A17", // Dark yellow
+    critical: "#B23B68", // Dark pink
 
     // ECG visualization - University Blue
     ecgLine: "#011451",
