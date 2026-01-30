@@ -17,7 +17,7 @@ const areas = [
     icon: FlaskConical,
     title: "ECG Core Laboratory",
     description:
-      "ISO 9001:2015 certified services for clinical trials, providing centralised ECG processing, Minnesota coding, and endpoint adjudication.",
+      "ISO 9001:2015 certified services for research studies, providing centralised ECG processing and endpoint adjudication.",
     href: "/services/core-lab",
   },
   {

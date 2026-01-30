@@ -84,9 +84,19 @@ export function PublicationsPreview() {
           >
             {/* Publication Stats */}
             <div className="p-6 rounded-lg border border-border bg-background">
-              <div className="text-4xl font-bold text-primary">237</div>
-              <div className="mt-1 text-sm text-foreground-muted">
-                Peer-reviewed publications (1995-2025)
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-primary">424</div>
+                  <div className="text-xs text-foreground-muted">Publications</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-primary">77</div>
+                  <div className="text-xs text-foreground-muted">h-index</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-primary">53K+</div>
+                  <div className="text-xs text-foreground-muted">Citations</div>
+                </div>
               </div>
               <div className="mt-4 pt-4 border-t border-border">
                 <div className="text-sm text-foreground-muted">

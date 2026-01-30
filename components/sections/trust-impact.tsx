@@ -15,8 +15,8 @@ export function TrustImpact() {
           transition={{ duration: 0.5 }}
         >
           <SectionHeading
-            headline="Trusted Globally"
-            subheadline="Decades of validation, millions of analyses, worldwide adoption."
+            headline="Trusted Internationally"
+            subheadline="Decades of validation, millions of analyses, international adoption."
           />
         </motion.div>
 

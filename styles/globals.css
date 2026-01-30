@@ -3,34 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-  /* Default theme CSS variables (Clinical Blue) */
+  /* University of Glasgow Brand Colors */
+  /* Primary: University Blue #011451 */
+  /* Secondary Light Palette: purple, pink, green, blue, yellow */
   :root {
-    --color-background: #FAFBFC;
-    --color-background-alt: #F0F4F8;
+    /* Backgrounds - subtle tints from secondary palette */
+    --color-background: #F8FBFC; /* Very pale blue tint */
+    --color-background-alt: #EEF5F6; /* Subtle light blue undertone */
     --color-surface: #FFFFFF;
-    --color-surface-hover: #F7F9FB;
+    --color-surface-hover: #F5FAFA; /* Light blue hover */
 
-    --color-text: #1A2B3C;
-    --color-text-muted: #5A6B7C;
+    /* Text - University Blue for accessibility on light backgrounds */
+    --color-text: #011451;
+    --color-text-muted: #3D4F6F;
     --color-text-inverse: #FFFFFF;
 
-    --color-primary: #1E3A5F;
-    --color-primary-hover: #2A4A73;
-    --color-primary-muted: #E8EEF4;
+    /* Primary - University Blue */
+    --color-primary: #011451;
+    --color-primary-hover: #1A2D62;
+    --color-primary-muted: #E8ECF4;
 
-    --color-accent: #D9534F;
-    --color-accent-hover: #C9433F;
-    --color-accent-muted: #FDF2F2;
+    /* Accent - Light Blue from secondary palette */
+    --color-accent: #4DBBC6;
+    --color-accent-hover: #3AA8B3;
+    --color-accent-muted: #E6F7F8;
 
-    --color-border: #D1D9E0;
-    --color-border-hover: #1E3A5F;
+    /* Borders */
+    --color-border: #D1D9E6;
+    --color-border-hover: #011451;
 
-    --color-success: #2E7D32;
-    --color-warning: #ED8B00;
-    --color-critical: #C62828;
+    /* Status colors from UofG secondary light palette */
+    --color-success: #81C071;
+    --color-warning: #F2D25C;
+    --color-critical: #E98BAF;
 
-    --color-ecg-line: #1E3A5F;
-    --color-ecg-glow: rgba(30, 58, 95, 0.2);
+    /* ECG visualization */
+    --color-ecg-line: #011451;
+    --color-ecg-glow: rgba(1, 20, 81, 0.2);
+
+    /* UofG Secondary Light Palette (for reference/direct use) */
+    --color-uofg-purple: #A5A1CE;
+    --color-uofg-pink: #E98BAF;
+    --color-uofg-green: #81C071;
+    --color-uofg-blue: #4DBBC6;
+    --color-uofg-yellow: #F2D25C;
   }
 
   html {
@@ -69,7 +85,7 @@
 }
 
 @layer components {
-  /* Glow border effect - uses theme colors */
+  /* Glow border effect - uses University Blue */
   .glow-border {
     @apply relative;
   }
@@ -89,7 +105,7 @@
     @apply opacity-100;
   }
 
-  /* Gradient text - uses theme colors */
+  /* Gradient text - University Blue to Light Blue accent */
   .text-gradient {
     background: linear-gradient(to right, var(--color-primary), var(--color-accent), var(--color-primary));
     -webkit-background-clip: text;

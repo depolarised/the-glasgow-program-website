@@ -69,7 +69,7 @@ export function GlasgowProgramPreview() {
               Adopted by Leading Manufacturers
             </h3>
             <p className="mt-2 text-sm text-foreground-muted">
-              The Glasgow Program is licensed to medical device manufacturers worldwide
+              The Glasgow Program is licensed to medical device manufacturers internationally
               through the University of Glasgow.
             </p>
 

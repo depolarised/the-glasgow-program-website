@@ -16,22 +16,22 @@ const serviceDetails = [
     name: "ECG Core Lab",
     href: "/services/core-lab",
     description:
-      "Centralised ECG processing and interpretation for clinical trials, with ISO 9001:2015 certification maintained since 2003.",
+      "Centralised ECG processing and interpretation for research studies, with ISO 9001:2015 certification maintained since 2003.",
     features: [
       "Secure ECG data management",
       "Automated interpretation with expert review",
-      "Minnesota coding",
+      "Serial ECG comparison",
       "Blinded endpoint adjudication",
     ],
   },
   {
     icon: Beaker,
-    name: "Clinical Trials",
+    name: "Research Studies",
     href: "/services/clinical-trials",
     description:
-      "Comprehensive support for national and international clinical trials with experience across cardiovascular, epidemiological, and COVID-related studies.",
+      "Comprehensive support for national and international research studies with experience across cardiovascular and epidemiological projects.",
     features: [
-      "Trial design consultation",
+      "Study design consultation",
       "Quality feedback to centres",
       "Serial ECG comparison",
       "Custom reporting",
@@ -42,7 +42,7 @@ const serviceDetails = [
     name: "Licensing",
     href: "/services/licensing",
     description:
-      "Non-exclusive commercial licensing of the Glasgow Program through the University of Glasgow, adopted by leading medical device manufacturers worldwide.",
+      "Non-exclusive commercial licensing of the Glasgow Program through the University of Glasgow, adopted by leading medical device manufacturers internationally.",
     features: [
       "Flexible licensing terms",
       "Technical integration support",
@@ -64,8 +64,8 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-6 text-xl text-foreground-muted">
               The Electrocardiology Section provides ECG Core Laboratory
-              services for clinical trials and licenses the Glasgow Program to
-              medical device manufacturers worldwide.
+              services for research studies and licenses the Glasgow Program to
+              medical device manufacturers internationally.
             </p>
           </div>
         </div>

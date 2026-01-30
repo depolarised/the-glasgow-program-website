@@ -117,7 +117,7 @@ export default function ResourcesPage() {
               Publications & Documentation
             </h1>
             <p className="mt-6 text-xl text-text-muted">
-              Over 50 years of research, 237+ publications, and comprehensive documentation
+              Over 50 years of research, 424 publications (h-index 77), and comprehensive documentation
               supporting the Glasgow ECG Program.
             </p>
           </div>

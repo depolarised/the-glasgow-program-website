@@ -70,7 +70,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-xl text-primary sm:text-2xl font-medium"
           >
-            Research into automated ECG interpretation since 1964
+            Over 50 years of research into automated ECG interpretation
           </motion.p>
 
           <motion.p
@@ -80,9 +80,9 @@ export function Hero() {
             className="mt-6 text-lg text-foreground-muted max-w-3xl"
           >
             The Electrocardiology Section develops the Glasgow Program for automated ECG analysis,
-            provides ECG Core Laboratory services for clinical trials, and conducts research into
-            electrocardiographic methods. Our work, led by Professor Peter Macfarlane since 1964,
-            has been adopted internationally and contributes to clinical guidelines worldwide.
+            provides ECG Core Laboratory services for research studies, and conducts research into
+            electrocardiographic methods. Our work, led by Professor Peter Macfarlane,
+            has been adopted internationally and contributes to clinical guidelines.
           </motion.p>
 
           {/* Location badge */}

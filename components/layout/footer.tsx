@@ -1,13 +1,33 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { navigation, siteConfig } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background-alt">
+    <footer id="footer" className="border-t border-border bg-background-alt scroll-mt-20">
       <div className="section-container py-12 lg:py-16">
+        {/* University of Glasgow Logo */}
+        <div className="mb-10 pb-8 border-b border-border">
+          <a
+            href={siteConfig.links.universityMain}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity"
+            aria-label="University of Glasgow"
+          >
+            <Image
+              src="/images/uofg-logo.svg"
+              alt="University of Glasgow"
+              width={180}
+              height={54}
+              className="h-12 w-auto"
+            />
+          </a>
+        </div>
+
         <div className="grid gap-8 lg:grid-cols-5">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
