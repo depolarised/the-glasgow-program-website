@@ -7,7 +7,7 @@ import { keyPublications, books, externalResources } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Research publications from the University of Glasgow Electrocardiology Section — 237 peer-reviewed papers and edited books.",
+    "Research publications from the University of Glasgow Electrocardiology Section — 424 publications with h-index 77.",
 };
 
 // Additional publications beyond the key ones (grouped by category)
@@ -118,17 +118,23 @@ export default function PublicationsPage() {
               Circulation, The Lancet, and the Journal of Electrocardiology.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3">
+            <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
               <div>
-                <div className="text-3xl font-bold text-primary">237</div>
+                <div className="text-3xl font-bold text-primary">424</div>
                 <div className="text-sm text-foreground-muted">
-                  Peer-reviewed publications
+                  Publications
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">1995-2025</div>
+                <div className="text-3xl font-bold text-primary">77</div>
                 <div className="text-sm text-foreground-muted">
-                  Publication period
+                  h-index
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">53K+</div>
+                <div className="text-sm text-foreground-muted">
+                  Citations
                 </div>
               </div>
               <div>

@@ -224,7 +224,7 @@ export const teamMembers: TeamMember[] = [
       "DSc (2000) for research contributions to electrocardiology",
       "Rijlant International Prize in Electrocardiology (1998), Belgian Royal Academy of Medicine",
       "President, Board of Computing in Cardiology (2008-2014)",
-      "237 peer-reviewed publications (1995-2025)",
+      "424 publications, h-index 77, 53,000+ citations (Scopus)",
     ],
     research: [
       "Computer-aided ECG interpretation",
@@ -538,9 +538,9 @@ export const externalResources = [
 // Stats - more measured, academic tone
 export const stats = [
   { value: "20M+", label: "ECGs interpreted annually" },
-  { value: "237", label: "Peer-reviewed publications" },
-  { value: "50+", label: "Years of continuous development" },
-  { value: "15+", label: "Languages supported" },
+  { value: "424", label: "Publications" },
+  { value: "77", label: "h-index" },
+  { value: "53K+", label: "Citations" },
 ];
 
 // Legacy exports for backward compatibility with old pages
