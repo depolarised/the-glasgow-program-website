@@ -6,7 +6,7 @@ import { navigation, siteConfig } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background-alt">
+    <footer id="footer" className="border-t border-border bg-background-alt scroll-mt-20">
       <div className="section-container py-12 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-5">
           {/* Logo and Description */}

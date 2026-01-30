@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "The Electrocardiology Section at the University of Glasgow — research into automated ECG interpretation since 1964.",
+    "The Electrocardiology Section at the University of Glasgow — over 50 years of research into automated ECG interpretation.",
 };
 
 export default function ResearchPage() {
@@ -46,7 +46,7 @@ export default function ResearchPage() {
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2 text-foreground-muted">
                 <Calendar className="h-4 w-4 text-primary" />
-                <span>Established {researchGroup.established}</span>
+                <span>Over 50 years of research</span>
               </div>
               <div className="flex items-center gap-2 text-foreground-muted">
                 <MapPin className="h-4 w-4 text-primary" />
@@ -215,7 +215,7 @@ export default function ResearchPage() {
         <div className="section-container">
           <SectionHeading
             title="History"
-            subtitle="From early cardiology research at Glasgow Royal Infirmary to worldwide adoption of the Glasgow Program."
+            subtitle="From early cardiology research at Glasgow Royal Infirmary to international adoption of the Glasgow Program."
           />
 
           <div className="mt-12 relative">

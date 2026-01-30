@@ -165,8 +165,10 @@ export default function PublicationsPage() {
                 <div className="mt-4 flex items-center gap-4 text-sm text-foreground-muted">
                   <span>{book.publisher}</span>
                   {book.edition && <span>{book.edition}</span>}
-                  {book.volumes && <span>{book.volumes}</span>}
                 </div>
+                {'note' in book && book.note && (
+                  <p className="mt-2 text-sm text-foreground-muted italic">{book.note}</p>
+                )}
                 {book.url && (
                   <a
                     href={book.url}

@@ -153,7 +153,7 @@ export default function LicensingPage() {
         <div className="section-container">
           <SectionHeading
             title="Current Licensees"
-            subtitle="The Glasgow Program is licensed to medical device manufacturers worldwide."
+            subtitle="The Glasgow Program is licensed to medical device manufacturers internationally."
           />
 
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -189,7 +189,7 @@ export default function LicensingPage() {
               </h2>
               <p className="mt-4 text-foreground-muted">
                 Diagnostic statements are available in {languages.length}+
-                languages, supporting worldwide deployment of licensed devices.
+                languages, supporting international deployment of licensed devices.
               </p>
               <p className="mt-4 text-foreground-muted">
                 Language options include regional variants (e.g., UK and US

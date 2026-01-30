@@ -38,6 +38,7 @@ export type TeamMember = {
 
 export const navigation = {
   main: [
+    { name: "About", href: "#footer" },
     { name: "Research", href: "/research" },
     { name: "Glasgow Program", href: "/program" },
     { name: "Services", href: "/services" },
@@ -54,7 +55,7 @@ export const navigation = {
     {
       name: "Healthcare Providers",
       href: "/services/core-lab",
-      description: "Quality-assured ECG workflows, reporting, and Minnesota coding support.",
+      description: "Quality-assured ECG workflows and reporting services.",
     },
     {
       name: "Clinical Research & Trials",
@@ -116,8 +117,7 @@ export const researchGroup = {
   focus: [
     "Automated ECG diagnosis techniques",
     "ECG Core Laboratory services",
-    "Clinical trials support",
-    "Minnesota coding for epidemiological studies",
+    "Research and epidemiological studies",
   ],
   certifications: [
     {
@@ -138,7 +138,7 @@ export const researchGroup = {
 
 // History of Cardiology at GRI and the Electrocardiology Section
 export const history = {
-  intro: "The Electrocardiology Section began in 1964 as Computer Assisted Reporting of Electrocardiograms (CARE) research, building on a rich tradition of cardiac medicine at Glasgow Royal Infirmary.",
+  intro: "The Electrocardiology Section has over 50 years of history, beginning as Computer Assisted Reporting of Electrocardiograms (CARE) research and building on a rich tradition of cardiac medicine at Glasgow Royal Infirmary.",
   timeline: [
     {
       year: "1950s",
@@ -217,7 +217,7 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/peter-macfarlane.jpg",
     email: "peter.macfarlane@glasgow.ac.uk",
     phone: "0141 201 5410",
-    bio: "Professor Macfarlane pioneered computerised ECG interpretation, developing the Glasgow Program since 1964. He held the positions of Professor in Medical Cardiology (1991-1995) and Professor of Electrocardiology (1995-2010) at the University of Glasgow. His work has influenced ESC, ACC, and AHA guidelines for acute myocardial infarction diagnosis, and the Glasgow Program is now used worldwide.",
+    bio: "Professor Macfarlane pioneered computerised ECG interpretation, developing the Glasgow Program over more than 50 years. He was Professor of Electrocardiology at the University of Glasgow, and his work has influenced ESC, ACC, and AHA guidelines for acute myocardial infarction diagnosis.",
     achievements: [
       "Commander of the Order of the British Empire (CBE, 2014) for Services to Healthcare",
       "Fellow of the Royal Society of Edinburgh (FRSE)",
@@ -286,11 +286,7 @@ export const glasgowProgram = {
     },
     {
       title: "Serial Comparison",
-      description: "Compare ECGs over time to detect evolving changes, critical for monitoring and clinical trials.",
-    },
-    {
-      title: "Minnesota Coding",
-      description: "Automatic centralised Minnesota coding, the standard for epidemiological and clinical trial research.",
+      description: "Compare ECGs over time to detect evolving changes, critical for monitoring and research studies.",
     },
     {
       title: "Multilingual Output",
@@ -391,13 +387,6 @@ export const keyPublications = [
     pmid: "PMC2499893",
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2499893/",
   },
-  {
-    title: "STEMI Screening Performance with an Updated University of Glasgow ECG Analysis Program",
-    authors: "Macfarlane PW et al.",
-    journal: "J Electrocardiol",
-    year: 2023,
-    note: "Recent validation study",
-  },
 ];
 
 // Books edited by the group
@@ -407,48 +396,34 @@ export const books = [
     editors: "Macfarlane PW, van Oosterom A, Pahlm O, Kligfield P, Janse M, Camm J",
     publisher: "Springer",
     edition: "2nd Edition",
-    volumes: "4 volumes",
+    note: "Definitive reference work in 4 volumes covering all aspects of electrocardiology",
     url: "https://link.springer.com/referencework/10.1007/978-0-85729-880-8",
-  },
-  {
-    title: "Basic Electrocardiology",
-    editors: "Macfarlane PW, van Oosterom A, Pahlm O, Kligfield P, Janse M, Camm J",
-    publisher: "Springer",
-  },
-  {
-    title: "Cardiac Arrhythmias and Mapping Techniques",
-    editors: "Macfarlane PW, van Oosterom A, Pahlm O, Kligfield P, Janse M, Camm J",
-    publisher: "Springer",
   },
 ];
 
-// ECG Core Lab - clinical trials
+// ECG Core Lab - research services
 export const coreLabServices = {
-  intro: "The ECG Core Lab provides centralised electrocardiogram processing and interpretation for clinical trials, with ISO 9001:2015 certification maintained since 2003.",
+  intro: "The ECG Core Lab provides centralised electrocardiogram processing and interpretation for research studies, with ISO 9001:2015 certification maintained since 2003.",
   services: [
     {
       title: "ECG Data Management",
-      description: "Secure storage and retrieval of trial ECGs in electronic and paper formats. Database systems supporting endpoint determination and serial comparison.",
+      description: "Secure storage and retrieval of study ECGs in electronic and paper formats. Database systems supporting endpoint determination and serial comparison.",
     },
     {
       title: "Automated Interpretation",
       description: "ECG interpretation using the Glasgow Program with reports reviewed by experienced staff.",
     },
     {
-      title: "Minnesota Coding",
-      description: "Standardised coding for epidemiological and clinical trial research.",
-    },
-    {
       title: "Blinded Measurements",
-      description: "Independent, blinded ECG measurement and interpretation for trial endpoints.",
+      description: "Independent, blinded ECG measurement and interpretation for research endpoints.",
     },
     {
       title: "Quality Feedback",
-      description: "Feedback to trial centres on ECG recording quality and data accuracy.",
+      description: "Feedback to study centres on ECG recording quality and data accuracy.",
     },
     {
-      title: "Trial Consultation",
-      description: "Support with clinical endpoint discussions and electrocardiology aspects of trial design.",
+      title: "Research Consultation",
+      description: "Support with endpoint discussions and electrocardiology aspects of study design.",
     },
   ],
   currentStudies: [
@@ -504,7 +479,7 @@ export const trainingResources = {
 
 // Licensing information - more academic, less sales
 export const licensingInfo = {
-  intro: "The Glasgow Program is available for non-exclusive commercial licensing through the University of Glasgow. The software has been adopted by numerous medical device manufacturers worldwide.",
+  intro: "The Glasgow Program is available for non-exclusive commercial licensing through the University of Glasgow. The software has been adopted by numerous medical device manufacturers internationally.",
   currentLicensees: [
     { name: "Draeger", description: "Patient monitoring systems", since: "1981" },
     { name: "Spacelabs Healthcare", description: "Patient monitoring and diagnostic cardiology", since: "1990s" },
@@ -538,7 +513,6 @@ export const externalResources = [
   {
     category: "Educational Resources",
     links: [
-      { name: "Minnesota Code Manual", url: "https://www.epi.umn.edu/cvdepi/minnesota-code/" },
       { name: "The ECG Library", url: "https://litfl.com/ecg-library/" },
       { name: "Alan E. Lindsay ECG Learning Center", url: "https://ecg.utah.edu" },
       { name: "ECG Wave-Maven (Harvard)", url: "https://ecg.bidmc.harvard.edu" },
@@ -563,9 +537,9 @@ export const externalResources = [
 
 // Stats - more measured, academic tone
 export const stats = [
-  { value: "20M+", label: "ECGs interpreted annually worldwide" },
+  { value: "20M+", label: "ECGs interpreted annually" },
   { value: "237", label: "Peer-reviewed publications" },
-  { value: "60+", label: "Years of continuous development" },
+  { value: "50+", label: "Years of continuous development" },
   { value: "15+", label: "Languages supported" },
 ];
 
@@ -575,8 +549,8 @@ export const pillars = [
     icon: "Shield",
     title: "Clinically Proven",
     points: [
-      "Over 50 years of continuous development since 1964",
-      "20+ million ECGs interpreted annually worldwide",
+      "Over 50 years of continuous development",
+      "20+ million ECGs interpreted annually",
       "Adopted by leading OEMs including Spacelabs, Mindray, and Draeger",
       "Influenced ESC, ACC, and AHA guidelines for acute MI definition",
     ],
@@ -588,7 +562,7 @@ export const pillars = [
       "Transparent rule-based logic for every interpretation",
       "Extended statements available with full diagnostic reasoning",
       "Meets IEC 60601-2-51 and ISO 9001 quality standards",
-      "Automatic Minnesota coding for epidemiological studies",
+      "Standardised coding for epidemiological studies",
     ],
   },
   {
@@ -598,7 +572,7 @@ export const pillars = [
       "Valid from birth through adulthood — including neonates",
       "Age, sex, race, medication, and clinical history factored in",
       "Paediatric database of 1,750+ healthy children's recordings",
-      "Diagnostic statements in 15+ languages worldwide",
+      "Diagnostic statements in 15+ languages",
     ],
   },
 ];
@@ -619,7 +593,7 @@ export const useCases = [
   {
     category: "Research",
     headline: "ECG Core Lab services",
-    description: "Centralised ECG processing, Minnesota coding, and serial comparison for research studies.",
+    description: "Centralised ECG processing and serial comparison for research studies.",
     href: "/services/clinical-trials",
   },
 ];
