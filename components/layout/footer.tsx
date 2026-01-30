@@ -21,9 +21,9 @@ export function Footer() {
             <Image
               src="/images/uofg-logo.svg"
               alt="University of Glasgow"
-              width={280}
-              height={84}
-              className="h-20 w-auto"
+              width={400}
+              height={120}
+              className="h-32 w-auto"
             />
           </a>
         </div>
