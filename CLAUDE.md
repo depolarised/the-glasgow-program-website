@@ -61,7 +61,7 @@ app/
 components/
   ├── layout/               # NavBar, Footer
   ├── sections/             # Page sections (Hero, ResearchAreas, etc.)
-  ├── theme/                # ThemeProvider, ThemeSwitcher
+  ├── theme/                # ThemeProvider
   ├── seo/                  # JSON-LD structured data
   └── ui/                   # Reusable components (Button, Card, etc.)
 lib/
@@ -87,14 +87,24 @@ Team              → /team
 Contact           → /contact
 ```
 
-### Theming System
+### Color System
 
-CSS variable-based theming with three preset themes:
-- **clinical** (default): Glasgow Clinical Blue — authoritative, institutional
-- **modern**: AI Modern Teal — contemporary tech aesthetic
-- **minimal**: Research Minimal — scientific journal style
+Single color scheme based on the official University of Glasgow brand guidelines:
 
-Theme colors defined in `lib/themes.ts`, applied via CSS variables in `:root`. The `ThemeProvider` handles localStorage persistence and runtime switching. Tailwind config maps semantic color names (e.g., `bg-primary`, `text-foreground`) to these CSS variables.
+**Primary:** University Blue `#011451`
+
+**Secondary Light Palette** (for accents):
+- Light purple: `#A5A1CE`
+- Light pink: `#E98BAF`
+- Light green: `#81C071`
+- Light blue: `#4DBBC6`
+- Light yellow: `#F2D25C`
+
+**Accessibility:**
+- White text on dark backgrounds
+- University Blue text on light backgrounds
+
+Colors defined in `lib/themes.ts`, applied via CSS variables in `:root`. Tailwind config maps semantic color names (e.g., `bg-primary`, `text-foreground`) to these CSS variables.
 
 ### Component Patterns
 

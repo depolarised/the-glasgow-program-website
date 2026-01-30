@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
-import { ThemeSwitcher } from "@/components/theme";
 import { navigation, siteConfig } from "@/lib/constants";
 
 export function NavBar() {
@@ -132,9 +131,8 @@ export function NavBar() {
             })}
           </div>
 
-          {/* CTA Buttons & Theme Switcher */}
+          {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center lg:gap-3">
-            <ThemeSwitcher />
             <Link href="/contact">
               <Button size="sm">Contact Us</Button>
             </Link>
@@ -202,10 +200,7 @@ export function NavBar() {
                 );
               })}
 
-              <div className="pt-4 border-t border-border space-y-2">
-                <div className="px-2 pb-2">
-                  <ThemeSwitcher />
-                </div>
+              <div className="pt-4 border-t border-border">
                 <Link href="/contact" className="block">
                   <Button className="w-full">Contact Us</Button>
                 </Link>

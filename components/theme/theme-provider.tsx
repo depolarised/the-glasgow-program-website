@@ -1,66 +1,35 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  useCallback,
-} from "react";
-import { themes, defaultTheme, getThemeCSSVariables } from "@/lib/themes";
-import type { ThemeName, Theme } from "@/lib/themes";
+import { createContext, useContext, useEffect, useState } from "react";
+import { glasgowTheme, getThemeCSSVariables } from "@/lib/themes";
+import type { Theme } from "@/lib/themes";
 
 interface ThemeContextType {
   theme: Theme;
-  themeName: ThemeName;
-  setTheme: (name: ThemeName) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const THEME_STORAGE_KEY = "glasgow-ecg-theme";
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [themeName, setThemeName] = useState<ThemeName>(defaultTheme);
   const [mounted, setMounted] = useState(false);
 
-  // Load theme from localStorage on mount
+  // Apply theme CSS variables on mount
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem(THEME_STORAGE_KEY) as ThemeName | null;
-    if (stored && themes[stored]) {
-      setThemeName(stored);
-    }
-  }, []);
-
-  // Apply theme CSS variables
-  useEffect(() => {
-    if (!mounted) return;
-
-    const theme = themes[themeName];
-    const variables = getThemeCSSVariables(theme);
+    const variables = getThemeCSSVariables(glasgowTheme);
 
     Object.entries(variables).forEach(([key, value]) => {
       document.documentElement.style.setProperty(key, value);
     });
-
-    // Store preference
-    localStorage.setItem(THEME_STORAGE_KEY, themeName);
-  }, [themeName, mounted]);
-
-  const setTheme = useCallback((name: ThemeName) => {
-    setThemeName(name);
   }, []);
 
-  const theme = themes[themeName];
-
-  // Prevent flash of wrong theme
+  // Prevent flash of unstyled content
   if (!mounted) {
     return null;
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, themeName, setTheme }}>
+    <ThemeContext.Provider value={{ theme: glasgowTheme }}>
       {children}
     </ThemeContext.Provider>
   );

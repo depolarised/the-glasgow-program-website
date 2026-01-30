@@ -1,7 +1,8 @@
-export type ThemeName = "clinical" | "modern" | "minimal";
+// University of Glasgow Brand Colors
+// Based on official UofG brand guidelines
 
 export interface Theme {
-  name: ThemeName;
+  name: string;
   label: string;
   description: string;
   colors: {
@@ -16,12 +17,12 @@ export interface Theme {
     textMuted: string;
     textInverse: string;
 
-    // Primary brand color
+    // Primary brand color - University Blue
     primary: string;
     primaryHover: string;
     primaryMuted: string;
 
-    // Accent for CTAs and alerts
+    // Accent - Light Blue from secondary palette
     accent: string;
     accentHover: string;
     accentMuted: string;
@@ -30,7 +31,7 @@ export interface Theme {
     border: string;
     borderHover: string;
 
-    // Status colors (colorblind-friendly)
+    // Status colors using secondary palette
     success: string;
     warning: string;
     critical: string;
@@ -42,145 +43,71 @@ export interface Theme {
   isDark: boolean;
 }
 
-// Option A: Glasgow Clinical Blue
-// Authoritative, calm, data-first - suitable for B2B and regulatory clients
-export const clinicalTheme: Theme = {
-  name: "clinical",
-  label: "Glasgow Clinical Blue",
-  description: "Authoritative and calm, ideal for healthcare partners",
+// University of Glasgow Official Brand Palette
+//
+// Primary: University Blue #011451
+//
+// Secondary Light Palette (for accents, light backgrounds):
+// - Light purple: #A5A1CE
+// - Light pink: #E98BAF
+// - Light green: #81C071
+// - Light blue: #4DBBC6
+// - Light yellow: #F2D25C
+//
+// Accessibility:
+// - White text on dark backgrounds
+// - University Blue text on light backgrounds
+
+export const glasgowTheme: Theme = {
+  name: "glasgow",
+  label: "University of Glasgow",
+  description: "Official University of Glasgow brand colors",
   isDark: false,
   colors: {
-    // Light backgrounds with subtle blue undertones
-    background: "#FAFBFC",
-    backgroundAlt: "#F0F4F8",
+    // Backgrounds - subtle tints from secondary light blue palette
+    background: "#F8FBFC", // Very pale blue tint
+    backgroundAlt: "#EEF5F6", // Subtle light blue undertone
     surface: "#FFFFFF",
-    surfaceHover: "#F7F9FB",
+    surfaceHover: "#F5FAFA", // Light blue hover
 
-    // Text - high contrast for accessibility
-    text: "#1A2B3C",
-    textMuted: "#5A6B7C",
+    // Text - University Blue for readability on light backgrounds
+    text: "#011451", // University Blue
+    textMuted: "#3D4F6F",
     textInverse: "#FFFFFF",
 
-    // Deep clinical blue - trust and longevity
-    primary: "#1E3A5F",
-    primaryHover: "#2A4A73",
-    primaryMuted: "#E8EEF4",
+    // Primary - University Blue
+    primary: "#011451",
+    primaryHover: "#1A2D62",
+    primaryMuted: "#E8ECF4",
 
-    // Coral accent - warm but professional
-    accent: "#D9534F",
-    accentHover: "#C9433F",
-    accentMuted: "#FDF2F2",
-
-    // Borders - slate grey
-    border: "#D1D9E0",
-    borderHover: "#1E3A5F",
-
-    // Colorblind-friendly status colors
-    success: "#2E7D32", // Green with good contrast
-    warning: "#ED8B00", // Orange (distinct from red/green)
-    critical: "#C62828", // Red with blue undertone
-
-    // ECG visualization
-    ecgLine: "#1E3A5F",
-    ecgGlow: "rgba(30, 58, 95, 0.2)",
-  },
-};
-
-// Option B: AI Modern Teal
-// Contemporary, technological clarity - modern AI aesthetic
-export const modernTheme: Theme = {
-  name: "modern",
-  label: "AI Modern Teal",
-  description: "Contemporary and technological, modern AI aesthetic",
-  isDark: false,
-  colors: {
-    // Clean white with subtle warmth
-    background: "#FAFAFA",
-    backgroundAlt: "#F0F7F7",
-    surface: "#FFFFFF",
-    surfaceHover: "#F5FAFA",
-
-    // Text
-    text: "#1A2F2F",
-    textMuted: "#5A7070",
-    textInverse: "#FFFFFF",
-
-    // Clear teal - technological clarity
-    primary: "#0D7377",
-    primaryHover: "#0A5C5F",
-    primaryMuted: "#E6F4F4",
-
-    // Soft orange accent - warm contrast
-    accent: "#E07A3D",
-    accentHover: "#C96A2F",
-    accentMuted: "#FEF4EE",
+    // Accent - Light Blue from secondary palette
+    accent: "#4DBBC6",
+    accentHover: "#3AA8B3",
+    accentMuted: "#E6F7F8",
 
     // Borders
-    border: "#D0E0E0",
-    borderHover: "#0D7377",
+    border: "#D1D9E6",
+    borderHover: "#011451",
 
-    // Colorblind-friendly status
-    success: "#1B7340",
-    warning: "#D97706",
-    critical: "#BE3A3A",
+    // Status colors from secondary light palette
+    success: "#81C071", // Light green
+    warning: "#F2D25C", // Light yellow
+    critical: "#E98BAF", // Light pink
 
-    // ECG - teal with glow
-    ecgLine: "#0D7377",
-    ecgGlow: "rgba(13, 115, 119, 0.25)",
+    // ECG visualization - University Blue
+    ecgLine: "#011451",
+    ecgGlow: "rgba(1, 20, 81, 0.2)",
   },
 };
 
-// Option C: Research-Centric Minimal
-// Scientific journal aesthetic - extremely clean and credible
-export const minimalTheme: Theme = {
-  name: "minimal",
-  label: "Research Minimal",
-  description: "Scientific and clean, journal-like credibility",
-  isDark: false,
-  colors: {
-    // Pure white and stone grey
-    background: "#FFFFFF",
-    backgroundAlt: "#F8F8F6",
-    surface: "#FFFFFF",
-    surfaceHover: "#FAFAF8",
-
-    // Text - graphite
-    text: "#2D2D2D",
-    textMuted: "#6B6B6B",
-    textInverse: "#FFFFFF",
-
-    // Muted blue - data visualization
-    primary: "#4A6FA5",
-    primaryHover: "#3A5F95",
-    primaryMuted: "#EEF2F7",
-
-    // Bold orange - urgent/important only
-    accent: "#E05A00",
-    accentHover: "#C04A00",
-    accentMuted: "#FFF3EB",
-
-    // Borders - stone
-    border: "#E5E5E0",
-    borderHover: "#4A6FA5",
-
-    // Colorblind-friendly status
-    success: "#3A7D44",
-    warning: "#CC7A00",
-    critical: "#C43C3C",
-
-    // ECG - muted blue
-    ecgLine: "#4A6FA5",
-    ecgGlow: "rgba(74, 111, 165, 0.15)",
-  },
+// Secondary Light Palette - exported for use in components
+export const secondaryLightPalette = {
+  purple: "#A5A1CE",
+  pink: "#E98BAF",
+  green: "#81C071",
+  blue: "#4DBBC6",
+  yellow: "#F2D25C",
 };
-
-export const themes: Record<ThemeName, Theme> = {
-  clinical: clinicalTheme,
-  modern: modernTheme,
-  minimal: minimalTheme,
-};
-
-export const defaultTheme: ThemeName = "clinical";
 
 // Generate CSS variables from theme
 export function getThemeCSSVariables(theme: Theme): Record<string, string> {
