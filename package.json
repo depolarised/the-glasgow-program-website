@@ -1,0 +1,35 @@
+{
+  "name": "glasgow-ecg-program",
+  "version": "1.0.0",
+  "description": "Glasgow ECG Program - Clinically validated ECG interpretation software",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.556.0",
+    "next": "^14.2.33",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
+  }
+}
