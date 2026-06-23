@@ -243,27 +243,27 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Brian Devine",
-    role: "Research Associate",
+    role: "Software Development Manager",
     image: "/images/team/brian-devine.jpg",
     bio: "Long-standing member of the Electrocardiology team with expertise in algorithm development and software implementation.",
   },
   {
     name: "Louise Inglis",
-    role: "Clinical Trials Manager",
+    role: "Clinical Trials and Quality Manager",
     // email: "louise.inglis@glasgow.ac.uk",
     image: "/images/team/louise-inglis.jpg",
     bio: "Manages administrative and data operations for clinical trials conducted through the ECG Core Lab.",
   },
   {
     name: "Robert Jamieson",
-    role: "Technical Specialist",
+    role: "Software Development Support Officer",
     image: "/images/team/robert-jamieson.jpg",
     bio: "Technical support for ECG analysis systems and clinical trial infrastructure.",
   },
   {
     name: "Ioannis Valasakis",
-    // titles: "BEng, MSc, MRes(Hons), PhD candidate",
-    role: "",
+    titles: "PhD",
+    role: "Research Software Engineer",
     bio: "Researches and develops AI algorithms for ECG analysis, extending AI-enabled functionality within the Glasgow Program.",
   },
 ];
