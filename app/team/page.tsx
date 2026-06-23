@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, ChevronDown } from "lucide-react";
-import { SectionHeading } from "@/components/ui";
+import { Mail, Phone } from "lucide-react";
 import { teamMembers } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -10,89 +9,92 @@ export const metadata: Metadata = {
 };
 
 function getInitials(name: string) {
-  const withoutHonorific = name.replace(/^(Professor|Prof\.?|Dr\.?)\s+/i, "");
-  return withoutHonorific
+  return name
+    .replace(/^(Professor|Prof\.?|Dr\.?)\s+/i, "")
     .split(" ")
     .filter(Boolean)
     .map((part) => part[0])
     .join("");
 }
 
-// Team member card component with expandable details
 function TeamMemberCard({
   member,
-  isLead = false
+  primary = false,
 }: {
   member: typeof teamMembers[0];
-  isLead?: boolean;
+  primary?: boolean;
 }) {
   return (
-    <div className={`p-6 rounded-lg border border-border bg-surface ${isLead ? 'ring-1 ring-primary/20' : ''}`}>
+    <div
+      className={`p-6 rounded-lg border border-border bg-surface flex flex-col gap-4 ${
+        primary ? "ring-1 ring-primary/20" : ""
+      }`}
+    >
       <div className="flex items-start gap-4">
-        {/* Avatar */}
-        <div className={`${isLead ? 'w-16 h-16' : 'w-12 h-12'} rounded-full bg-primary-muted flex items-center justify-center shrink-0`}>
-          <span className={`${isLead ? 'text-xl' : 'text-base'} font-bold text-primary`}>
+        <div className="w-12 h-12 rounded-full bg-primary-muted flex items-center justify-center shrink-0">
+          <span className="text-base font-bold text-primary">
             {getInitials(member.name)}
           </span>
         </div>
-
-        {/* Info */}
         <div className="flex-1 min-w-0">
-          <h3 className={`${isLead ? 'text-lg' : 'text-base'} font-semibold text-foreground`}>
+          <h3 className="text-base font-semibold text-foreground leading-snug">
             {member.name}
           </h3>
           {member.titles && (
-            <p className="text-sm text-primary">{member.titles}</p>
+            <p className="text-sm text-primary mt-0.5">{member.titles}</p>
           )}
           {member.role && (
             <p className="text-sm text-foreground-muted">{member.role}</p>
           )}
           {member.secondaryRole && (
-            <p className="text-sm text-foreground-muted">{member.secondaryRole}</p>
+            <p className="text-xs text-foreground-muted">{member.secondaryRole}</p>
           )}
         </div>
       </div>
 
-      {/* Bio */}
-      <p className="mt-4 text-sm text-foreground-muted leading-relaxed">
-        {member.bio}
-      </p>
+      <p className="text-sm text-foreground-muted leading-relaxed">{member.bio}</p>
 
-      {/* Email */}
-      {member.email && (
-        <div className="mt-4 pt-4 border-t border-border">
-          <a
-            href={`mailto:${member.email}`}
-            className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-          >
-            <Mail className="h-4 w-4" />
-            {member.email}
-          </a>
-        </div>
+      {member.achievements && member.achievements.length > 0 && (
+        <ul className="space-y-1.5 border-t border-border pt-4">
+          {member.achievements.map((achievement) => (
+            <li key={achievement} className="flex gap-2 text-xs text-foreground-muted">
+              <span className="text-primary/60 shrink-0 mt-px">—</span>
+              <span>{achievement}</span>
+            </li>
+          ))}
+        </ul>
       )}
 
-      {/* Expandable section placeholder for education/qualifications */}
-      <details className="mt-4 group">
-        <summary className="flex items-center gap-2 text-sm text-foreground-muted cursor-pointer hover:text-foreground">
-          <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
-          Education & Qualifications
-        </summary>
-        <div className="mt-3 pl-6 text-sm text-foreground-muted">
-          <p className="italic">Details to be added</p>
+      {(member.email || member.phone) && (
+        <div className="flex flex-col gap-1 pt-3 border-t border-border">
+          {member.email && (
+            <a
+              href={`mailto:${member.email}`}
+              className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+            >
+              <Mail className="h-3.5 w-3.5 shrink-0" />
+              {member.email}
+            </a>
+          )}
+          {member.phone && (
+            <p className="inline-flex items-center gap-2 text-sm text-foreground-muted">
+              <Phone className="h-3.5 w-3.5 shrink-0" />
+              {member.phone}
+            </p>
+          )}
         </div>
-      </details>
+      )}
     </div>
   );
 }
 
 export default function TeamPage() {
-  const professorMacfarlane = teamMembers[0];
-  const otherMembers = teamMembers.slice(1);
+  const [peter, derek, ...rest] = teamMembers;
 
   return (
     <main className="pt-20 lg:pt-24">
       {/* Header */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-20 bg-background">
         <div className="section-container">
           <div className="max-w-3xl">
             <span className="text-sm font-medium text-primary">
@@ -109,25 +111,18 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Lead Researcher */}
+      {/* All team members — one unified section */}
       <section className="py-12 lg:py-16 bg-surface">
         <div className="section-container">
-          <div className="max-w-2xl">
-            <TeamMemberCard member={professorMacfarlane} isLead={true} />
+          {/* Senior pair — wider cards, more room for content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TeamMemberCard member={peter} primary />
+            <TeamMemberCard member={derek} />
           </div>
-        </div>
-      </section>
 
-      {/* Team Members */}
-      <section className="py-12 lg:py-16 bg-background">
-        <div className="section-container">
-          <SectionHeading
-            title="Team Members"
-            subtitle="The Electrocardiology Section team."
-          />
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {otherMembers.map((member) => (
+          {/* Rest of the team — naturally narrower in 4-col */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {rest.map((member) => (
               <TeamMemberCard key={member.name} member={member} />
             ))}
           </div>
